@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import randomName from '@scaleway/random-name';
 import io from 'socket.io-client';
-const socket = io.connect('https://task6-backend-production.up.railway.app/');
+const socket = io.connect(`${process.env.REACT_APP_SOCKET}`);
 
 export default function Dashboard() {
     const navigate = useNavigate();
